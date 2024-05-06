@@ -1,0 +1,10 @@
+<div class="container container-fluid ">
+    <div class="row">
+        <div *ngFor="let pieza of piezas" class=" offset-1 col-2" (click)="validar();pieza.seleccionada=!pieza.seleccionada">
+            <img class="rounded-circle" [src]="dorso" style="max-width: 100%;"
+                *ngIf="!pieza.seleccionada&&!pieza.descubierta" />
+            <img  class="rounded-circle" [src]="pieza.imagen" style="max-width: 100%;"
+                *ngIf="pieza.seleccionada||pieza.descubierta" />
+        </div>
+    </div>
+</div>
